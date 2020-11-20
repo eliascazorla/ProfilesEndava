@@ -23,4 +23,9 @@ public class ServicioProfiles implements IServicioProfiles{
     public Optional<Profile> getByDev(long id) {
         return profilesRepository.findById(id);
     }
+
+    @Override
+    public Profile addProfile(Profile profile) {
+        return profilesRepository.save(profile);
+    }
 }

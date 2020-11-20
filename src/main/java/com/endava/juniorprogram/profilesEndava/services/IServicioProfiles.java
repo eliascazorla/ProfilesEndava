@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface IServicioProfiles {
     List<Profile> getAll();
     Optional<Profile> getByDev(long id);
+    Profile addProfile(Profile profile);
 }
