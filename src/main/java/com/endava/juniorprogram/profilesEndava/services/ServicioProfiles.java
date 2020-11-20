@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ServicioProfiles implements IServicioProfiles{
@@ -16,5 +17,10 @@ public class ServicioProfiles implements IServicioProfiles{
     @Override
     public List<Profile> getAll() {
         return (List<Profile>) profilesRepository.findAll();
+    }
+
+    @Override
+    public Optional<Profile> getByDev(long id) {
+        return profilesRepository.findById(id);
     }
 }
