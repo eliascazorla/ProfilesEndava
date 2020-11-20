@@ -28,4 +28,9 @@ public class ServicioProfiles implements IServicioProfiles{
     public Profile addProfile(Profile profile) {
         return profilesRepository.save(profile);
     }
+
+    @Override
+    public Profile updateProfile(Profile profile) {
+        return profilesRepository.save(profile);
+    }
 }

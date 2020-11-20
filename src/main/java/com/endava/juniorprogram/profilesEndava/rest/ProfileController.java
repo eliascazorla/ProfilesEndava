@@ -29,4 +29,9 @@ public class ProfileController {
     public Profile createProfile(@RequestBody Profile profile){
         return servicioProfiles.addProfile(profile);
     }
+
+    @PutMapping
+    public Profile updateProfile(@RequestBody Profile profile){
+        return servicioProfiles.updateProfile(profile);
+    }
 }
